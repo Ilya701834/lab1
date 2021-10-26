@@ -51,7 +51,8 @@ module.exports.twosDifference = function  twosDifference (mas) {
     for(let i=0;i<mas.length;i++){
         for(let j=0;j<mas.length;j++){
             if(+mas[i]-+mas[j]===2){
-                newmas.push([+mas[i],+mas[j]])
+                newmas.push(+mas[i])
+                newmas.push(+mas[j])
             }
         }
     }
@@ -67,6 +68,6 @@ module.exports.twosDifference = function  twosDifference (mas) {
             }
         }
     }
-    newmas.forEach((x,i) => i%2===0 ? otvet=otvet+'['+x+',' : otvet=otvet+x+'],')
- return `[${otvet}]`
+    newmas.forEach((x,i) => i%2===0?  otvet=otvet+'['+x+',':  otvet=otvet+x+'],')
+    return `[${otvet.slice(0,-1)}]\n`
 }
