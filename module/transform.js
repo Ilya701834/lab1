@@ -13,7 +13,7 @@ class TransformLab extends Transform {
         let result;
         switch (this.action) {
             case 'task1':
-                    result = strictEqual(chunk.toString('utf8'))
+                result = strictEqual(chunk.toString('utf8'))
                 break;
             case 'task2':
                 result = twosDifference(chunk.toString('utf8'));
